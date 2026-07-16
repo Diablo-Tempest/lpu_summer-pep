@@ -1,4 +1,4 @@
-use("session1");
+// use("session1");
 // db.student.insertOne({
 //     name: "John",
 //     age: 24,
@@ -35,6 +35,7 @@ use("session1");
 //     city: "Queens",
 // });
 // db.student.find({name: 'Clark'});
+// find() returns a cursor object. Think of it like a pointer to traver from one document to another.
 // db.student.updateOne({age: 46}, {
 //     $set: {
 //         name: "Logan",
@@ -276,24 +277,24 @@ use('company');
 //         }
 //     }
 // ])
-db.orders.aggregate([
-    {
-        $group: {
-            _id: "$category",
-            totalSize: {$sum: "$amount"},
-            avgAmount: {$avg: "$amount"},
-            maxSale: {$max: "$amount"},
-            minSale: {$min: "$amount"},
-            count: {$sum: 1}
-        }
-    },
+// db.orders.aggregate([
+    // {
+    //     $group: {
+    //         _id: "$category",
+    //         totalSize: {$sum: "$amount"},
+    //         avgAmount: {$avg: "$amount"},
+    //         maxSale: {$max: "$amount"},
+    //         minSale: {$min: "$amount"},
+    //         count: {$sum: 1}
+    //     }
+    // },
     // {
     //     $out: "updatedOrders"
     // }, // create a new collection with the aggregated data. Replaces the old data with the one if present
-    {
-        $merge: "updatedOrders"
-    }// the same as $out but, it does not replace the old data. Instead, it add the new data and keep the old ones intact.
-])
+    // {
+    //     $merge: "updatedOrders"
+    // }// the same as $out but, it does not replace the old data. Instead, it add the new data and keep the old ones intact.
+// ])
 
 
 // db.orders.aggregate([
