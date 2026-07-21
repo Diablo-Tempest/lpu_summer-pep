@@ -85,7 +85,7 @@
 
 // let img = document.getElementById('img1');
 // img.setAttribute('src', 'https://cdn.pixabay.com/photo/2017/07/24/19/57/tiger-2535888_640.jpg');
-// // img.removeAttribute('alt');
+// img.removeAttribute('alt');
 // const value = img.getAttribute('src');
 // console.log(value);
 // img.classList.add('invert');
@@ -130,11 +130,12 @@
 //     h1.innerText = textBox.value;
 // })
 // button.addEventListener('dblclick', ()=>{
-//     h1.innerText = textBox.value;
+//     h1.innerText = "";
+//     textBox.value = "";
 // })
 
 // click, dblclick, mousedown, mousemove, mouseleave, mouseover, contextmenu, wheel, keydown, keyup
 
-// document.addEventListener('key', (e)=>{
+// document.addEventListener('keydown', (e)=>{
 //     console.log(e.key);
 // })

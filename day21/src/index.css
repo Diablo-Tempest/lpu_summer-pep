@@ -1,0 +1,26 @@
+@import "tailwindcss";
+.dark {
+  background-color: #08060d;
+  color: white;
+}
+
+.light {
+  background-color: white;
+  color: #08060d;
+}
+
+h1{
+  @apply font-extrabold text-3xl;
+}
+.ulDesign{
+  @apply flex justify-center items-center gap-10 h-14 bg-amber-700 text-white font-bold text-xl;
+}
+.itemDesign{
+  @apply h-14 w-30 transition flex justify-center items-center;
+  &&:hover{
+    @apply bg-amber-800;
+  }
+}
+.activeChange{
+  @apply bg-amber-900;
+}

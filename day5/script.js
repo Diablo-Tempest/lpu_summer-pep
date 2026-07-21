@@ -32,16 +32,16 @@
 // display(10, 20, 30, 40, 50);
 
 // let greeting = (fname="John", lname="Doe") => {
-    //     return `Hello ${fname} ${lname}`;
-    // }
-    
-    // console.log(greeting("Bruce", "Wayne"));
-    
-    
-    // let display = (...args) => {
-    //     console.log(args);
-    // }
-    // display(10, 20, 30, 40, 50);
+//     return `Hello ${fname} ${lname}`;
+// }
+
+// console.log(greeting("Bruce", "Wayne"));
+
+
+// let display = (...args) => {
+//     console.log(args);
+// }
+// display(10, 20, 30, 40, 50);
 
 // let arr1 = [1, 2, 3];
 // let arr2 = [...arr1]; // [1, 2, 3]
@@ -66,7 +66,7 @@
 // Using ID
 // document.getElementById("head1").textContent = "Updated Heading";
 // document.getElementById("head1").innerHTML = "<i>Updated Heading 3</i>";
-// document.getElementById("head1").innerText = "Updated Heading 2";
+// document.getElementById("head1").innerText = "<i>Updated Heading 2</i>";
 
 // document.title = "This is new Title";
 
