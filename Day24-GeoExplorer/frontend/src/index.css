@@ -1,0 +1,102 @@
+@import "leaflet/dist/leaflet.css";
+
+:root {
+  /* Color tokens — inspired by field maps & compass instruments */
+  --ink: #11241f;          /* deep pine — primary dark surface / text */
+  --ink-soft: #3a4f49;     /* muted text, borders on dark */
+  --parchment: #f7f3e9;    /* primary background, like aged map paper */
+  --parchment-dim: #ece5d3;
+  --gold: #d9a441;         /* primary accent — CTAs, highlights */
+  --gold-deep: #b5822c;
+  --rust: #c1523a;         /* alerts, hospitals/ATM markers */
+  --sage: #6f8f76;         /* secondary accent — parks, success states */
+  --sage-deep: #55705a;
+  --white: #ffffff;
+  --line: rgba(17, 36, 31, 0.12);
+
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", monospace;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --shadow-card: 0 1px 2px rgba(17, 36, 31, 0.06), 0 8px 24px rgba(17, 36, 31, 0.08);
+  --shadow-pop: 0 12px 40px rgba(17, 36, 31, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--parchment);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+.display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+/* Focus visibility — keyboard accessibility */
+button:focus-visible,
+input:focus-visible,
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--gold-deep);
+  outline-offset: 2px;
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Scrollbar polish (webkit) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ink-soft);
+  border-radius: 10px;
+  border: 2px solid var(--parchment);
+}
