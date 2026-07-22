@@ -9,5 +9,33 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <!-- <script type="module" src="/src/main.jsx" defer></script>
+        <script type="module" src="/src/main.jsx" async></script> -->
   </body>
 </html>
+
+<!--
+Without async or defer
+1. Browser parses HTML
+2. Find the script
+3. Stop parsing the HTML
+4. Download the script
+5. Execute the script
+6. Continue parsing the remaining HTML 
+
+
+async:
+1. Browser parses HTML
+2. Download the script in parallel
+3. As soon as the download completes, HTML parsing pauses.
+4. Script executes immediately.
+5. HTML parsing resumes.
+
+defer:
+1. Browser parses HTML
+2. Finds the scripts
+3. Start downloading the script in parallel
+4. Continue parsing HTML
+5. After the HTML is fully parsed, execute the script 
+
+-->
